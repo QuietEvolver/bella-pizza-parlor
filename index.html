@@ -4,20 +4,37 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <script src="js/scripts.js"></script>
   <title>Bella's Pizzeria</title>
 </head>
 <body>
-  <form>
   <h2>Bella's Pizza</h2>
-    <label for="customer-name"></label>
-    <input type="text" id="customer-name">
-  <fieldset>
-    <legend>Order</legend>
-    <label for="input-size"></label>
-    <input type="number" id="input-size">
-    <label for="input-topping"></label>
-    <input type="number" id="input-topping">
-  </fieldset>
-</form>
+  <form>
+
+    <fieldset>
+      <legend>$ Size(s)</legend>
+      <input type="radio" id="small" name="small" value="small">
+      <label for="small">Small $5</label>
+      <input type="radio" id="medium" name="medium" value="medium">
+      <label for="medium">Medium $10</label>
+      <input type="radio" id="large" name="large" value="large">
+      <label for="large">Large $15</label>
+    </fieldset>
+
+    <fieldset>
+      <legend>$ Topping(s)</legend>
+      <input type="checkbox" id="pepperoni" name="pepperoni">
+      <label for="pepperoni">Pepperoni</label>
+      <input type="checkbox" id="mushroom" name="mushroom">
+      <label for="mushroom">Mushroom $10</label>
+      <input type="checkbox" id="anchovies" name="anchovies">
+      <label for="anchovies">Anchovies</label>
+    </fieldset>
+    <div>
+      <button type="submit">Order</button>
+    </div>
+  </form>
+  <pre id="log"></pre>
 </body>
 </html>
