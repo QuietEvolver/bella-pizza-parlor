@@ -10,9 +10,10 @@ function Customer( currentId, customerName, order ) {
   this.order = order;
 }
 
-function Order( size, type ) {
-  this.size = { 1: "small", 2: "medium", 3: "large"}; 
-  this.type = {1: "anchovies", 2: "pineapple"};
+function Order( size, topping, price ) {
+  this.size = { small: "small", medium: "medium", large: "large"}; 
+  this.topping = {1: "anchovies", 2: "pineapple"};
+  this.price = 0;
 }
 
 PizzaParlor.prototype.assignId = function() {
@@ -45,15 +46,31 @@ Customer.prototype.customerOrderName = function(){
 }
 
 Order.prototype.fullOrder = function(){
-  return this.size + " " + this.type;
+  return this.size + " " + this.topping + " " + price;
+}
+
+
+Order.prototype.calculateOrder = function(){
+    if(this.size === "small")
 }
 
 // Utility fx
+
 function createCustomer(){
-  const order = new Order( size, type );
+  const order = new Order( size, topping, price );
   const customer = new Customer( customerName );
   return customer; 
 }
+
+// list pp customers
+function listCustomers(pizzaParlorDisplay) {
+  Object.keys(pizzaParlorDisplay.customers).forEach(function(key) {
+    const customer = pizzaParlorDisplay.findCustomer(key);
+    console.log("display customer: ", )
+ return customer.id
+  });
+}
+
 
 
 
