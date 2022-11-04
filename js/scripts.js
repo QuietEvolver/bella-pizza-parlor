@@ -1,4 +1,10 @@
-function PizzaParlor () {
+function PizzaParlor() {
   this.customers = {};
-  this.id = 0;
+  this.currentId = 0;
 }
+
+function Customer( customerName, order) {
+  this.customerName = customerName;
+  this.order = order;
+}
+
