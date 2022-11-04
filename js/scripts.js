@@ -10,9 +10,9 @@ function Customer( currentId, customerName, order ) {
   this.order = order;
 }
 
-function Order( size, topping, price ) {
+function Order( size, toppings, price ) {
   this.size = { small: "small", medium: "medium", large: "large"}; 
-  this.topping = {1: "anchovies", 2: "pineapple"};
+  this.toppings = toppings;
   this.price = 0;
 }
 
@@ -46,18 +46,24 @@ Customer.prototype.customerOrderName = function(){
 }
 
 Order.prototype.fullOrder = function(){
-  return this.size + " " + this.topping + " " + price;
+  return this.size + " " + this.toppings + " " + price;
 }
 
-
 Order.prototype.calculateOrder = function(){
-    if(this.size === "small")
+  if(this.size === "small"){
+    this.price = 5 + (this.toppings.length);
+  } else if(this.size === "medium"){
+    this.price = 10 + (this.toppings.length);
+  } else if(this.size === "large"){
+    this.price = 15 + (this.toppings.length);
+    return this.price;
+  }
 }
 
 // Utility fx
 
 function createCustomer(){
-  const order = new Order( size, topping, price );
+  const order = new Order( size, toppings, price );
   const customer = new Customer( customerName );
   return customer; 
 }

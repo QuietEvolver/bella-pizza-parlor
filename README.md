@@ -88,16 +88,21 @@ Expected Output: customerName: "Angela"
 
 // HAVE PIZZA ORDER {}
 Describe: order()           
-Test: "It should create a pizza order object with two keys: size and topping"
+Test: "It should create a pizza order object with two keys: size and toppings"
 Code: let order = new Order({size:"small"}; 
-  anchovies: "anchovies", pineapple: "pineapple"};)
-Expected Output: order { size: "small", toppings: "anchovies" }
+  toppings.length: "anchovies", "pineapple"};)
+Expected Output: order { size: "small", toppings: 1 }
 
 // ORD TO CUST
-Describe: Order.prototype. fullOrder()           
+Describe: Order.prototype.fullOrder()           
 Test: "It should return a pizza order object on the customer with two properties: topping and size."
 Code: order(size = large, topping = anchovies, price = 5);
 Expected Output: "large pepperoni";
+
+Describe: Order.prototype.calculateOrder();
+Test: "It should calculate an order based on size and number of toppings."
+Code: calculateOrder("small", toppings.length=2)
+Expected Output: 10;
 
 Describe: createCustomer()           
 Test: "It should create a customer with an order on the pizza order object with two keys: name and customerId."
