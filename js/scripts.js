@@ -68,7 +68,6 @@ function createCustomer(){
   return customer; 
 }
 
-// list pp customers
 function listCustomers(pizzaParlorDisplay) {
   Object.keys(pizzaParlorDisplay.customers).forEach(function(key) {
     const customer = pizzaParlorDisplay.findCustomer(key);
@@ -82,17 +81,19 @@ const pizzaParlor = new PizzaParlor();
 
 window.addEventListener("load", function(){
   const form = document.querySelector("form");
-const log = document.querySelector("#log");
-
+  const log = document.querySelector("#log");
   form.addEventListener(
     "submit",
     (event) => {
       const data = new FormData(form);
+      console.log("new FormDats deets: ", data);
       let output = "";
       for (const entry of data) {
         output = `${output}${entry[0]}=${entry[1]}\r`;
       }
       log.innerText = output;
+      console.log("output: ", output);
+      console.log("e, form, log", event, form, log); 
       event.preventDefault();
     },
     false
