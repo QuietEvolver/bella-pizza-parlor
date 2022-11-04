@@ -27,12 +27,12 @@ Create a website for a pizza company where a user can choose one or more individ
 ## Tests
 ```
 // (example of FINAL FXN BLOCK test)
-Describe: Pizza()           
+** Describe: Pizza()           
 // Describe statement is listed once, for a single function
 // For multiple pieces of functionality, write multiple tests (as many as are needed) under the same Describe bloc
-Test: "It should return a Pizza object with two properties for toppings and size"
-Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
-Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
+** Test: "It should return a Pizza object with two properties for toppings and size"
+** Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
+** Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
 // PROTOTYPE METHODS
 // prototype methodS on objects, have a separate Describe statement, along with any tests.
@@ -41,26 +41,36 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 // HAVE A PIZZA PARLOR {}
 Describe: PizzaParlor()           
 Test: "It should create a pizza parlor object with two keys: customer and id"
-Code: const pizzaParlor = new PizzaParlor();
-Expected Output: pizzaParlor { 
-  customers: {}, 
-  currentId: 1
+Code: const pizzaParlor = function PizzaParlor() {
+  this.customers = {"Angela"};
+  this.currentId = 0;
+}
+Expected Output: PizzaParlor { 
+  customers: "Angela", 
+  currentId: 1 }
 
+// HAVE CUSTOMERS {}
 Describe: Customer()           
 Test: "It should create a customer object with two keys: customer and order"
-Code: const customer = new Customer();
+Code: const customer = new Customer (customerName = "Angela";
+  order = 1;
+};
 Expected Output: 
-// pizzaParlor { 
-/ customerName: "Angela""], 
-  order:  }
+Customer { 
+  customerName: "Angela", 
+  order: 1 }
 
-// PIZZA OBJ - TBD
-Describe: Customers()           
-Test: "It should create a customer object with two keys: customer and id"
-Code: const pizzaParlor = new PizzaParlor();
-Expected Output: pizzaParlor { 
-  toppings: ["anchovies", "pineapple"], 
-  size: "medium" }
+// HAVE PIZZA ORDER {}
+Describe: order()           
+Test: "It should create a pizza order object with two keys: size and type"
+Code: let order = new Order( size:"small"}; 
+  this.type = {anchovies: "anchovies", pineapple: "pineapple"};)
+order.size.small;
+order.size.anchovies;
+Expected Output: order { 
+  size: "samll"
+  toppings: "anchovies" 
+  }
   
   
 ```
