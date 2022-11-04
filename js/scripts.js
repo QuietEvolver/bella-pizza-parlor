@@ -1,3 +1,4 @@
+// BI 
 function PizzaParlor() {
   this.customers = {};
   this.currentId = 0;
@@ -10,8 +11,8 @@ function Customer( currentId, customerName, order ) {
 }
 
 function Order( size, type ) {
-  this.size = { small: "small", medium: "medium", large: "large"}; 
-  this.type = {anchovies: "anchovies", pineapple: "pineapple"};
+  this.size = { 1: "small", 2: "medium", 3: "large"}; 
+  this.type = {1: "anchovies", 2: "pineapple"};
 }
 
 PizzaParlor.prototype.assignId = function() {
@@ -25,7 +26,7 @@ PizzaParlor.prototype.addCustomer = function(customer){
 } // pizzaparlor.addCustomer = ("Angela");
 
 PizzaParlor.prototype.findCustomer = function(id) {
-  if (this.customer[id] !== undefined) {
+  if (this.customers[id] !== undefined) {
     return this.customers[id];
   }
   return false;
@@ -43,19 +44,15 @@ Customer.prototype.customerOrderName = function(){
   return this.customerName; 
 }
 
-function createContact(){
+Order.prototype.fullOrder = function(){
+  return this.size + " " + this.type;
+}
+
+// Utility fx
+function createCustomer(){
   const order = new Order( size, type );
   const customer = new Customer( customerName );
   return customer; 
-}
-
-// list pp customers
-function listCustomers(pizzaParlorDisplay) {
-  Object.keys(pizzaParlorDisplay.customers).forEach(function(key) {
-    const customer = pizzaParlorDisplay.findCustomer(key);
-    console.log("display customer: ", )
- return customer.id
-  });
 }
 
 

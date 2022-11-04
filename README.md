@@ -74,7 +74,6 @@ Code: deleteCustomer(customers);
 pizzaparlor.deleteCustomer = ("Angela");
 Expected Output: {}
 
-
 // HAVE CUSTOMERS {}
 Describe: Customer()           
 Test: "It should create a customer object with two keys: customer and order"
@@ -87,7 +86,6 @@ Test: "It should return a customer name.r"
 Code: const ordername = customer (customerName = "Angela"; order = 1; };
 Expected Output: customerName: "Angela" 
 
-
 // HAVE PIZZA ORDER {}
 Describe: order()           
 Test: "It should create a pizza order object with two keys: size and type"
@@ -98,10 +96,16 @@ order.size.anchovies;
 Expected Output: order { size: "samll", toppings: "anchovies" }
 
 // ORD TO CUST
-Describe: Customer.prototype.order()           
-Test: "It should create a pizza order object on the customer  with two properties: type and size."
-Code: 
-Expected Output: 
+Describe: fullOrder()           
+Test: "It should return a pizza order object on the customer with two properties: type and size."
+Code: order(size = 3, type = 1;
+Expected Output: "large pepperoni";
+
+Describe: createCustomer()           
+Test: "It should create a customer with an order on the pizza order object with two keys: name and customerId."
+Code: addCustomer(customerName, order{size=1, type=1});
+Expected Output: customer {"Angela, large pepperoni};
+ 
 ```
 ## Setup/Installation Requirements
 
