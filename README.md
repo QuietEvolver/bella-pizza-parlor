@@ -44,21 +44,6 @@ Test: "It should create a pizza parlor object with two keys: customer and id"
 Code: const pizzaParlor = function PizzaParlor({ "Angela", 0; }) 
 Expected Output: PizzaParlor { customers: "Angela", currentId: 1 }
 
-// HAVE CUSTOMERS {}
-Describe: Customer()           
-Test: "It should create a customer object with two keys: customer and order"
-Code: const customer = new Customer (customerName = "Angela"; order = 1; };
-Expected Output: Customer { customerName: "Angela", order: 1 }
-
-// HAVE PIZZA ORDER {}
-Describe: order()           
-Test: "It should create a pizza order object with two keys: size and type"
-Code: let order = new Order({size:"small"}; 
-  anchovies: "anchovies", pineapple: "pineapple"};)
-order.size.small;
-order.size.anchovies;
-Expected Output: order { size: "samll", toppings: "anchovies" }
-
 // PIZZA PARLOR: prototypes CUST TO PP
 Describe: PizzaParlor.prototype.assignId()           
 Test: "It should create a customer on the pizza order object with two keys: name and customerId."
@@ -78,20 +63,39 @@ pizzaparlor.findCustomer = ("Angela");
 Expected Output: customer {customers:{}, 0};
 
 Describe: PizzaParlor.prototype.updateCustomer()           
+Test: "It should update a customer on the pizza order object by customers id."
+Code: updateCustomer(customers);
+pizzaparlor.updateCustomer = ("Angela");
+Expected Output: customer {customers:{}, 0};
+
+Describe: PizzaParlor.prototype.updateCustomer()           
 Test: "It should delete a customer on the pizza order object by customers id."
 Code: deleteCustomer(customers);
 pizzaparlor.deleteCustomer = ("Angela");
 Expected Output: {}
 
 
+// HAVE CUSTOMERS {}
+Describe: Customer()           
+Test: "It should create a customer object with two keys: customer and order"
+Code: const customer = new Customer (customerName = "Angela"; order = 1; };
+Expected Output: Customer { customerName: "Angela", order: 1 }
+
+// CUSTOMER prototypes:
+Describe: customerOrderName()
+Test: "It should return a customer name.r"
+Code: const ordername = customer (customerName = "Angela"; order = 1; };
+Expected Output: customerName: "Angela" 
 
 
-// UPDATE CUSTOMER tba
-Describe: PizzaParlor.prototype.updateCustomer()           
-Test: "It should update a customer on the pizza order object by customers id."
-Code: updateCustomer(customers);
-pizzaparlor.updateCustomer = ("Angela");
-Expected Output: customer {customers:{}, 0};
+// HAVE PIZZA ORDER {}
+Describe: order()           
+Test: "It should create a pizza order object with two keys: size and type"
+Code: let order = new Order({size:"small"}; 
+  anchovies: "anchovies", pineapple: "pineapple"};)
+order.size.small;
+order.size.anchovies;
+Expected Output: order { size: "samll", toppings: "anchovies" }
 
 // ORD TO CUST
 Describe: Customer.prototype.order()           

@@ -11,7 +11,7 @@ function Customer( currentId, customerName, order ) {
 
 function Order( size, type ) {
   this.size = { small: "small", medium: "medium", large: "large"}; 
-  this.type = {anchovies: "anchovies", anchovies: "pineapple"};
+  this.type = {anchovies: "anchovies", pineapple: "pineapple"};
 }
 
 PizzaParlor.prototype.assignId = function() {
@@ -39,19 +39,15 @@ PizzaParlor.prototype.deleteCustomer = function(id){
   return true;
 }
 
+Customer.prototype.customerOrderName = function(){
+  return this.customerName; 
+}
 
-
-
-// MUST STILL PASS THE (e)
-// PizzaParlor.prototype.updateContact = function (contacts){
-//   let currentId = contacts[this.currentId];
-//   if( this.contacts[currentId] === undefined){
-//     return false;
-//   } else if ( this.contacts[currentId] !== undefined) {
-//     this.contacts[currentId].contactName = editFirstName;
-//     this.contacts[currentId].order = {};
-//   }
-// }
+function createContact(){
+  const order = new Order( size, type );
+  const customer = new Customer( customerName );
+  return customer; 
+}
 
 // list pp customers
 function listCustomers(pizzaParlorDisplay) {
