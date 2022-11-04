@@ -12,13 +12,26 @@
 * Javascript
 
 ## Description
-Create a web application that takes a number from the user and returns a list of values from 0 to the user's inputted number. Here is the [repo](https://github.com/quietevolver/mr-robogers-neighborhood.git)
+Create a website for a pizza company where a user can choose one or more individual toppings (cheese, pepperoni, artichoke, anchovy, etc.), a size to order a pizza, and see the final cost. Here is the [repo](https://github.com/QuietEvolver/bella-pizza-parlor.git)
 
 ### Objectives 
+* Allow the user to choose toppings and size for the pizza they'd like to order.
+* Create a pizza object constructor with properties for toppings and size.
+* Create a prototype method for the cost of a pizza depending on the selections chosen. Use your own formula for this.
 
 ### Goals
+- To have have a pizza parlor {}
+- To have have customers by id {}
+- To have have customers able to order specific toppings {}, and pizza sizes{}
 
 ## Tests
+
+(example of last test)
+Describe: Pizza()
+
+Test: "It should return a Pizza object with two properties for toppings and size"
+Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
+Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
 ## Setup/Installation Requirements
 
