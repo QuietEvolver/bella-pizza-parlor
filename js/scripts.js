@@ -18,3 +18,7 @@ PizzaParlor.prototype.assignId = function() {
   return this.currentId;
 }
 
+PizzaParlor.prototype.addCustomer = function(customer){
+  customer.id = this.assignId();
+  this.customers[customer.id] = customer;
+}

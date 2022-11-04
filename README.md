@@ -65,7 +65,11 @@ Test: "It should create a customer on the pizza order object with two keys: name
 Code: addCustomer(customer);
 Expected Output: cusomter{contacts:{}, 1};
 
-
+Describe: PizzaParlor.prototype.customerId()           
+Test: "It should create a customer on the pizza order object with two keys: name and customerId."
+Code: addCustomer(cusomer);
+pizzaparlor.addCustomer = ("Angela");
+Expected Output: cusomter {contacts:{}, 1};
 
   
 ```
