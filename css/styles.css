@@ -63,3 +63,7 @@ button:active {
   color: black;
   outline: 1px solid black;
 }
+
+#log {
+ color: yellowgreen;
+}

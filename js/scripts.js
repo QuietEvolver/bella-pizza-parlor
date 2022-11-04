@@ -80,6 +80,27 @@ const pizzaParlor = new PizzaParlor();
 
 
 window.addEventListener("load", function(){
+
+  let msgprice = 0;
+  let inputValue = srcElement.form.fieldset.input;
+  parseInt(inputValue);
+  (function inputValueFx(inputValue){
+    switch(inputValue) {
+      case 1:
+        msgprice = 5
+        break;
+      case 2:
+        msgprice = 10
+        break;
+      case 3:
+        msgprice = 15
+        break;
+      default:
+        msgprice = 0
+        return msgprice; 
+    }
+  })();
+
   const form = document.querySelector("form");
   const log = document.querySelector("#log");
   form.addEventListener(
