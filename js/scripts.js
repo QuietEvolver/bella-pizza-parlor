@@ -12,3 +12,9 @@ function Order( size, type ) {
   this.size = { small: "small", medium: "medium", large: "large"}; 
   this.type = {anchovies: "anchovies", anchovies: "pineapple"};
 }
+
+PizzaParlor.prototype.assignId = function() {
+  this.currentId += 1;
+  return this.currentId;
+}
+

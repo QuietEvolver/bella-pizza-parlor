@@ -41,37 +41,32 @@ Create a website for a pizza company where a user can choose one or more individ
 // HAVE A PIZZA PARLOR {}
 Describe: PizzaParlor()           
 Test: "It should create a pizza parlor object with two keys: customer and id"
-Code: const pizzaParlor = function PizzaParlor() {
-  this.customers = {"Angela"};
-  this.currentId = 0;
-}
-Expected Output: PizzaParlor { 
-  customers: "Angela", 
-  currentId: 1 }
+Code: const pizzaParlor = function PizzaParlor({ "Angela", 0; }) 
+Expected Output: PizzaParlor { customers: "Angela", currentId: 1 }
 
 // HAVE CUSTOMERS {}
 Describe: Customer()           
 Test: "It should create a customer object with two keys: customer and order"
-Code: const customer = new Customer (customerName = "Angela";
-  order = 1;
-};
-Expected Output: 
-Customer { 
-  customerName: "Angela", 
-  order: 1 }
+Code: const customer = new Customer (customerName = "Angela"; order = 1; };
+Expected Output: Customer { customerName: "Angela", order: 1 }
 
 // HAVE PIZZA ORDER {}
 Describe: order()           
 Test: "It should create a pizza order object with two keys: size and type"
-Code: let order = new Order( size:"small"}; 
-  this.type = {anchovies: "anchovies", pineapple: "pineapple"};)
+Code: let order = new Order({size:"small"}; 
+  anchovies: "anchovies", pineapple: "pineapple"};)
 order.size.small;
 order.size.anchovies;
-Expected Output: order { 
-  size: "samll"
-  toppings: "anchovies" 
-  }
-  
+Expected Output: order { size: "samll", toppings: "anchovies" }
+
+// PIZZA PARLOR: prototypes CUST TO PP
+Describe: PizzaParlor.prototype.assignId()           
+Test: "It should create a customer on the pizza order object with two keys: name and customerId."
+Code: addCustomer(customer);
+Expected Output: cusomter{contacts:{}, 1};
+
+
+
   
 ```
 ## Setup/Installation Requirements
