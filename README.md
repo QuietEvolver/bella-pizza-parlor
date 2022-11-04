@@ -63,28 +63,41 @@ Expected Output: order { size: "samll", toppings: "anchovies" }
 Describe: PizzaParlor.prototype.assignId()           
 Test: "It should create a customer on the pizza order object with two keys: name and customerId."
 Code: addCustomer(customer);
-Expected Output: customer{contacts:{}, 1};
+Expected Output: customer{customers:{}, 1};
 
 Describe: PizzaParlor.prototype.customerId()           
 Test: "It should create a customer on the pizza order object with two keys: name and customerId."
 Code: addCustomer(cusomer);
 pizzaparlor.addCustomer = ("Angela");
-Expected Output: customer {contacts:{}, 1};
+Expected Output: customer {customers:{}, 1};
  
 Describe: PizzaParlor.prototype.findCustomer()           
 Test: "It should find a customer on the pizza order object by customerId."
 Code: findCustomer(id);
 pizzaparlor.findCustomer = ("Angela");
-Expected Output: customer {contacts:{}, 0};
+Expected Output: customer {customers:{}, 0};
 
- 
+Describe: PizzaParlor.prototype.updateCustomer()           
+Test: "It should delete a customer on the pizza order object by customers id."
+Code: deleteCustomer(customers);
+pizzaparlor.deleteCustomer = ("Angela");
+Expected Output: {}
+
+
+
+
+// UPDATE CUSTOMER tba
 Describe: PizzaParlor.prototype.updateCustomer()           
 Test: "It should update a customer on the pizza order object by customers id."
-Code: updateCustomer(contacts);
+Code: updateCustomer(customers);
 pizzaparlor.updateCustomer = ("Angela");
-Expected Output: customer {contacts:{}, 0};
+Expected Output: customer {customers:{}, 0};
 
-
+// ORD TO CUST
+Describe: Customer.prototype.order()           
+Test: "It should create a pizza order object on the customer  with two properties: type and size."
+Code: 
+Expected Output: 
 ```
 ## Setup/Installation Requirements
 

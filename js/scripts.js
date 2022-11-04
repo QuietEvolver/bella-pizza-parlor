@@ -3,7 +3,8 @@ function PizzaParlor() {
   this.currentId = 0;
 }
 
-function Customer( customerName, order ) {
+function Customer( currentId, customerName, order ) {
+  this.currentId = currentId;
   this.customerName = customerName;
   this.order = order;
 }
@@ -30,12 +31,36 @@ PizzaParlor.prototype.findCustomer = function(id) {
   return false;
 } // pp.findCustomer[id=0])
 
-PizzaParlor.prototype.updateContact = function (contacts){
-  let currentId = contacts[this.currentId];
-  if( this.contacts[currentId] === undefined){
+PizzaParlor.prototype.deleteCustomer = function(id){
+  if (this.customers[id] === undefined) {
     return false;
-  } else if ( this.contacts[currentId] !== undefined) {
-    this.contacts[currentId].contactName = editFirstName;
-    this.contacts[currentId].order = {};
   }
+  delete this.customers[id];
+  return true;
 }
+
+
+
+
+// MUST STILL PASS THE (e)
+// PizzaParlor.prototype.updateContact = function (contacts){
+//   let currentId = contacts[this.currentId];
+//   if( this.contacts[currentId] === undefined){
+//     return false;
+//   } else if ( this.contacts[currentId] !== undefined) {
+//     this.contacts[currentId].contactName = editFirstName;
+//     this.contacts[currentId].order = {};
+//   }
+// }
+
+// list pp customers
+function listCustomers(pizzaParlorDisplay) {
+  Object.keys(pizzaParlorDisplay.customers).forEach(function(key) {
+    const customer = pizzaParlorDisplay.findCustomer(key);
+    console.log("display customer: ", )
+ return customer.id
+  });
+}
+
+
+
