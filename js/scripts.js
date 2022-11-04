@@ -29,3 +29,13 @@ PizzaParlor.prototype.findCustomer = function(id) {
   }
   return false;
 } // pp.findCustomer[id=0])
+
+PizzaParlor.prototype.updateContact = function (contacts){
+  let currentId = contacts[this.currentId];
+  if( this.contacts[currentId] === undefined){
+    return false;
+  } else if ( this.contacts[currentId] !== undefined) {
+    this.contacts[currentId].contactName = editFirstName;
+    this.contacts[currentId].order = {};
+  }
+}
