@@ -21,4 +21,11 @@ PizzaParlor.prototype.assignId = function() {
 PizzaParlor.prototype.addCustomer = function(customer){
   customer.id = this.assignId();
   this.customers[customer.id] = customer;
-}
+} // pizzaparlor.addCustomer = ("Angela");
+
+PizzaParlor.prototype.findCustomer = function(id) {
+  if (this.customer[id] !== undefined) {
+    return this.customers[id];
+  }
+  return false;
+} // pp.findCustomer[id=0])
