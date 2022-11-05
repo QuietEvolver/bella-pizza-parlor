@@ -81,8 +81,10 @@ Order.prototype.calculateOrder = function(){
 // Utility fx
 
 function createCustomer(){
-  const order = new Order( size, toppings, price );
+ //  const order = new Order( size, toppings, price );
+  const customerName = document.getElementById("customer-name").value;
   const customer = new Customer( customerName );
+  console.log("fx createCustomer: ", customer);
   return customer; 
 }
 
@@ -103,6 +105,8 @@ function handleFormSubmission(e){
   // console.log("SubmitEvent e", e);
   const form = document.querySelector("form");
   const log = document.querySelector("#log");
+
+  pizzaParlor.addCustomer(createCustomer()); 
   form.addEventListener(
     "submit",
     (event) => {
