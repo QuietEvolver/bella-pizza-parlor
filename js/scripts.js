@@ -59,6 +59,24 @@ Order.prototype.calculateOrder = function(){
     return this.price;
   }
 }
+ /* let msgprice = 0;
+` let inputValue = e.currentTarget
+  (function inputValueFx(inputValue){
+    switch(inputValue) {
+      case 1:
+        msgprice = 5
+        break;
+      case 2:
+        msgprice = 10
+        break;
+      case 3:
+        msgprice = 15
+        break;
+      default:
+        msgprice = 0
+        return msgprice; 
+    }
+  })();*/
 
 // Utility fx
 
@@ -78,47 +96,33 @@ function listCustomers(pizzaParlorDisplay) {
 
 const pizzaParlor = new PizzaParlor();
 
-
-window.addEventListener("load", function(){
-
+function handleFormSubmission(e){
+  e.preventDefault(); 
+  // console.log("incoming e", e);
+  // e = SubmitEvent;
+  // console.log("SubmitEvent e", e);
   const form = document.querySelector("form");
   const log = document.querySelector("#log");
   form.addEventListener(
     "submit",
     (event) => {
       const data = new FormData(form);
-      console.log("new FormDats deets: ", data);
+    console.log("(e)=>data = new FormData: ", data);
       let output = "";
-      for (const entry of data) {
+      for (const entry of data) { // FormDataEntryValue
         output = `${output}${entry[0]}=${entry[1]}\r`;
       }
       log.innerText = output;
       console.log("output: ", output);
       console.log("e, form, log", event, form, log); 
-      event.preventDefault();
-
-      let msgprice = 0;
-      let inputValue = event.HTMLFormElement.path.form.input;
-      parseInt(inputValue);
-      (function inputValueFx(inputValue){
-        switch(inputValue) {
-          case 1:
-            msgprice = 5
-            break;
-          case 2:
-            msgprice = 10
-            break;
-          case 3:
-            msgprice = 15
-            break;
-          default:
-            msgprice = 0
-            return msgprice; 
-        }
-      })();
+      event.preventDefault(); // }
     },
     false
-  );
+  ); 
+}
+
+window.addEventListener("load", function(){
+  document.querySelector("form").addEventListener("submit", handleFormSubmission);
 });
 
 
