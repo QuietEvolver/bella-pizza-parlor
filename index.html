@@ -12,11 +12,7 @@
   <h2>Bella's Pizza</h2>
   <form>
 
-    <fieldset>
-      <label for="first-name">Order Name:</label>
-      <input type="text" id="first-name" name="first-name" required>
-    </fieldset>
-
+    
     <fieldset>
       <legend>$ Size(s)</legend>
       <input type="radio" id="small" name="size" value="small">
@@ -36,6 +32,15 @@
       <input type="checkbox" id="anchovies" name="toppings">
       <label for="anchovies">Anchovies</label>
     </fieldset>
+
+    <fieldset>
+      <legend>Welcome</legend>
+      <div>
+        <label for="first-name">Order Name:</label>
+        <input type="text" id="customer-name" name="customer-name" required minlength="2" maxlength="30" size="10" value="">
+      </div>
+    </fieldset>
+    
     <div>
       <button type="submit">Order</button>
     </div>
