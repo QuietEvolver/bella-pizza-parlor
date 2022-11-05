@@ -98,7 +98,7 @@ window.addEventListener("load", function(){
       event.preventDefault();
 
       let msgprice = 0;
-      let inputValue = event.target.form.fieldset.input;
+      let inputValue = event.HTMLFormElement.form.fieldset.input;
       parseInt(inputValue);
       (function inputValueFx(inputValue){
         switch(inputValue) {
