@@ -99,9 +99,9 @@ Test: "It should return a pizza order object on the customer with two properties
 Code: order(size = large, topping = anchovies, price = 5);
 Expected Output: "large pepperoni";
 
-Describe: Order.prototype.calculateOrder();
+Describe: Order.prototype.calculateOrderPrice();
 Test: "It should calculate an order based on size and number of toppings."
-Code: calculateOrder("small", toppings.length=2)
+Code: calculateOrderPrice("small", toppings.length=2)
 Expected Output: 10;
 
 Describe: createCustomer()           

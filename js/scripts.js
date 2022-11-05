@@ -10,10 +10,10 @@ function Customer( currentId, customerName, order ) {
   this.order = order;
 }
 
-function Order( size, toppings, price ) {
-  this.size = { small: "small", medium: "medium", large: "large"}; 
-  this.toppings = toppings;
-  this.price = 0;
+function Order( size){ //, toppings , price ) {
+  this.size = size;
+  // this.toppings = toppings;//*2;
+ //  this.price = 0;
 }
 
 PizzaParlor.prototype.assignId = function() {
@@ -49,7 +49,7 @@ Order.prototype.fullOrder = function(){
   return this.size + " " + this.toppings + " " + price;
 }
 
-Order.prototype.calculateOrder = function(){
+Order.prototype.calculateOrderPrice = function(){
   if(this.size === "small"){
     this.price = 5 + (this.toppings.length);
   } else if(this.size === "medium"){
@@ -83,8 +83,22 @@ Order.prototype.calculateOrder = function(){
 function createCustomer(){
  //  const order = new Order( size, toppings, price );
   const customerName = document.getElementById("customer-name").value;
-  const customer = new Customer( customerName );
-  console.log("fx createCustomer: ", customer);
+  const size = document.querySelectorAll("input[name='order-size']:checked").value;
+  /* const toppings = document.querySelector("input:checkbox[name='order-toppings']:checked").value;
+    // const toppingss = document.querySelectorAll("input[type=toppings]").value;
+  const toppingss = document.querySelectorAll("input[type=toppings]").value;
+  for (let toppings of toppingss) {
+		if (toppings.checked) {
+			console.log(toppings.value);
+		}
+	}
+  let size = toppingss;
+  */
+
+  const order = new Order( size); //, toppings ); // price
+  const customer = new Customer( customerName, order.size );
+  console.log("fx createCustomer: customer", customer);
+  console.log("fx createCustomer: order.Order ", order);
   return customer; 
 }
 
@@ -106,7 +120,6 @@ function handleFormSubmission(e){
   const form = document.querySelector("form");
   const log = document.querySelector("#log");
 
-  pizzaParlor.addCustomer(createCustomer()); 
   form.addEventListener(
     "submit",
     (event) => {
@@ -123,6 +136,8 @@ function handleFormSubmission(e){
     },
     false
   ); 
+  pizzaParlor.addCustomer(createCustomer()); 
+  console.log("pizza parlor: ", pizzaParlor);
 }
 
 window.addEventListener("load", function(){
