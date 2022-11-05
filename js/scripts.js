@@ -4,13 +4,12 @@ function PizzaParlor() {
   this.currentId = 0;
 }
 
-function Customer( currentId, customerName, order ) {
-  this.currentId = currentId;
+function Customer( customerName, order ) {
   this.customerName = customerName;
   this.order = order;
 }
 
-function Order( size){ //, toppings , price ) {
+function Order(size){ //, toppings , price ) {
   this.size = size;
   // this.toppings = toppings;//*2;
  //  this.price = 0;
@@ -136,7 +135,7 @@ function handleFormSubmission(e){
     },
     false
   ); 
-  pizzaParlor.addCustomer(createCustomer()); 
+  pizzaParlor.addCustomer(createCustomer(FormData.entry)); 
   console.log("pizza parlor: ", pizzaParlor);
 }
 
