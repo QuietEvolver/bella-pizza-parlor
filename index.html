@@ -13,22 +13,27 @@
   <form>
 
     <fieldset>
+      <label for="first-name">Order Name:</label>
+      <input type="text" id="first-name" name="first-name" required>
+    </fieldset>
+
+    <fieldset>
       <legend>$ Size(s)</legend>
-      <input type="radio" id="small" name="small" value="small">
+      <input type="radio" id="small" name="size" value="small">
       <label for="small" checked >Small $5</label>
-      <input type="radio" id="medium" name="medium" value="medium">
+      <input type="radio" id="medium" name="size"value="medium">
       <label for="medium">Medium $10</label>
-      <input type="radio" id="large" name="large" value="large">
+      <input type="radio" id="large" name="size" value="large">
       <label for="large">Large $15</label>
     </fieldset>
 
     <fieldset>
       <legend>$ Topping(s)</legend>
-      <input type="checkbox" id="pepperoni" name="pepperoni">
+      <input type="checkbox" id="pepperoni" name="toppings">
       <label for="pepperoni">Pepperoni</label>
-      <input type="checkbox" id="mushroom" name="mushroom">
+      <input type="checkbox" id="mushroom" name="toppings">
       <label for="mushroom">Mushroom $10</label>
-      <input type="checkbox" id="anchovies" name="anchovies">
+      <input type="checkbox" id="anchovies" name="toppings">
       <label for="anchovies">Anchovies</label>
     </fieldset>
     <div>
