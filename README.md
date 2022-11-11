@@ -41,8 +41,8 @@ Expected Output: Order { toppings: ["anchovies", "pineapple"], size: "medium", p
 
 Describe: Order.prototype.calculateOrderPrice();
 Test: "It should calculate an order based on size."
-Code: calculateOrderPrice("small", 5)
-Expected Output: 5;
+Code: calculateOrderPrice("small", "basil", 5)
+Expected Output:size: {'small', toppings: 'basil', price: 0};
 
 ```
 ## Setup/Installation Requirements
