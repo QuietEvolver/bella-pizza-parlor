@@ -34,10 +34,16 @@ Create a website for a pizza company where a user can choose one or more individ
 ** Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
 ** Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
-Describe: Pizza()           
-Test: "It should create a pizza parlor object with two keys: size, toppings."
-Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
-Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
+Describe: Order()           
+Test: "It should create a pizza order object with two keys: size, toppings."
+Code: const myOrder = new Order(["anchovies", "pineapple"], "medium");
+Expected Output: Order { toppings: ["anchovies", "pineapple"], size: "medium" }
+
+Describe: Order.prototype.calculateOrderPrice();
+Test: "It should calculate an order based on size."
+Code: calculateOrderPrice("small", 5)
+Expected Output: 5;
+
 ```
 ## Setup/Installation Requirements
 
