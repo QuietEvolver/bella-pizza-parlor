@@ -34,7 +34,7 @@ Create a website for a pizza company where a user can choose one or more individ
 ** Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
 ** Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
-Describe: PizzaParlor()           
+Describe: Pizza()           
 Test: "It should create a pizza parlor object with two keys: size, toppings."
 Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
 Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
