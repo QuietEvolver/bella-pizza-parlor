@@ -14,37 +14,38 @@
     
   <form>
 
-    <fieldset id="order-name">
+    <!-- <fieldset id="order-name">
       <legend>Welcome</legend>
-      <div>
+       <div>
         <label for="customer-name">Order Name:</label>
         <input type="text" id="customer-name" name="customer-name" required minlength="2" maxlength="30" size="10" value="">
-      </div>
-    </fieldset>
+      </div> 
+    </fieldset> -->
 
     <fieldset id="order-size">
       <legend>$ Size(s)</legend>
-      <input type="radio" id="small" name="size" value="small">
+      <input type="radio" id="small" name="order-size" value="small">
       <label for="small" checked >Small $5</label>
-      <input type="radio" id="medium" name="size"value="medium">
+      <input type="radio" id="medium" name="order-size" value="medium">
       <label for="medium">Medium $10</label>
-      <input type="radio" id="large" name="size" value="large">
+      <input type="radio" id="large" name="order-size" value="large">
       <label for="large">Large $15</label>
     </fieldset>
 
     <fieldset id="order-toppings">
       <legend>$ Topping(s)</legend>
-      <input type="checkbox" id="pepperoni" name="toppings">
+      <input type="checkbox" id="pepperoni" name="pepperoni">
       <label for="pepperoni">Pepperoni</label>
-      <input type="checkbox" id="mushroom" name="toppings">
-      <label for="mushroom">Mushroom $10</label>
-      <input type="checkbox" id="anchovies" name="toppings">
+      <input type="checkbox" id="mushroom" name="mushroom">
+      <label for="mushroom">Mushroom</label>
+      <input type="checkbox" id="anchovies" name="anchovies">
       <label for="anchovies">Anchovies</label>
     </fieldset>
     <div>
       <button type="submit">Order</button>
     </div>
   </form>
-  <pre id="log"></pre>
+  <!-- <pre id="log"></pre> -->
+  <pre class="price-output"></pre>
 </body>
 </html>
