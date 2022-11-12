@@ -28,6 +28,7 @@ function handleFormSubmission(e){
   toppings.forEach((element)=>{
     const paragraph = document.createElement("p");
     paragraph.append(element.value);
+    document.body.append(paragraph);
   })
 
   // toppings.forEach(function())
