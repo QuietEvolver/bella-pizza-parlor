@@ -17,3 +17,8 @@ Order.prototype.calculateOrderPrice = function(){
 }
 
 // UI
+
+
+window.addEventListener("load", ()=> {
+  document.querySelector("form").addEventListener("submit", handleFormSubmission);
+})
