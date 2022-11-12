@@ -44,11 +44,6 @@ Test: "It should calculate an order based on size."
 Code: calculateOrderPrice("small", ["basil"])
 Expected Output:size: {'small', [toppings: 'basil'], price: 5};
 
-Describe: Order.prototype.calculateSizePrice();
-Test: "It should calculate an order based on size plus toppings."
-Code: calculateOrderPrice("medium", ["basil"])
-Expected Output:size: {'medium', [toppings: 'basil'], price: 12};
-
 Describe: Order.prototype.calculateToppingsPrice();
 Test: "It should calculate an order based on toppings."
 Code: calculateOrderPrice("medium", ["basil"])
