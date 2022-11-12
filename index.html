@@ -23,7 +23,7 @@
     </fieldset> -->
 
     <fieldset id="order-size">
-      <legend>$ Size(s)</legend>
+      <legend>$ Size(s): Select preference</legend>
       <input type="radio" id="small" name="order-size" value="small">
       <label for="small" checked >Small $5</label>
       <input type="radio" id="medium" name="order-size" value="medium">
@@ -33,12 +33,12 @@
     </fieldset>
 
     <fieldset id="order-toppings">
-      <legend>$ Topping(s)</legend>
-      <input type="checkbox" id="pepperoni" name="pepperoni">
+      <legend>$ Topping(s): Leave unchecked for No Toppings</legend>
+      <input class="toppings" type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
       <label for="pepperoni">Pepperoni</label>
-      <input type="checkbox" id="mushroom" name="mushroom">
+      <input class="toppings" type="checkbox" id="mushroom" name="toppings" value="mushroom">
       <label for="mushroom">Mushroom</label>
-      <input type="checkbox" id="anchovies" name="anchovies">
+      <input class="toppings" type="checkbox" id="anchovies" name="toppings" value="anchovies">
       <label for="anchovies">Anchovies</label>
     </fieldset>
     <div>
@@ -46,6 +46,10 @@
     </div>
   </form>
   <!-- <pre id="log"></pre> -->
-  <pre class="price-output"></pre>
+  <div class="output">
+    <p class="size"></p>
+    <p class="toppings"></p>
+    <p class="price"></p>
+  </div>
 </body>
 </html>
