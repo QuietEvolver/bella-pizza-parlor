@@ -22,14 +22,20 @@ function handleFormSubmission(e){
   console.log("e: ", e);
   // const size = document.querySelector("input[name='order-size']:radio");
   // const toppings = document.querySelector('.topping').checked;
-  const toppings = document.querySelectorAll("input[name='toppings']:checked");
-  // const toppings = Array.from(orderToppings);
+  const orderToppings = document.querySelectorAll("input[name='toppings']:checked");
+  
+  const toppings = Array.from(orderToppings);
+  toppings.forEach((element)=>{
+    const paragraph = document.createElement("p");
+    paragraph.append(element.value);
+  })
 
   // toppings.forEach(function())
   let order = new Order();
   // order.size;
   order.toppings;
   console.log("Toppings: ", toppings);
+  console.log("Order Toppings: ", orderToppings);
   order.calculateOrderPrice(toppings);
   console.log("Price: ", order.calculateOrderPrice(toppings));
 
