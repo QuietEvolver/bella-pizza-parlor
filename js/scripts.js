@@ -17,7 +17,23 @@ Order.prototype.calculateOrderPrice = function(){
 }
 
 // UI
+function handleFormSubmission(e){
+  e.preventDefault();
+  console.log("e: ", e);
+  // const size = document.querySelector("input[name='order-size']:radio");
+  // const toppings = document.querySelector('.topping').checked;
+  const toppings = document.querySelectorAll("input[name='toppings']:checked");
+  // const toppings = Array.from(orderToppings);
 
+  // toppings.forEach(function())
+  let order = new Order();
+  // order.size;
+  order.toppings;
+  console.log("Toppings: ", toppings);
+  order.calculateOrderPrice(toppings);
+  console.log("Price: ", order.calculateOrderPrice(toppings));
+
+}
 
 window.addEventListener("load", ()=> {
   document.querySelector("form").addEventListener("submit", handleFormSubmission);
