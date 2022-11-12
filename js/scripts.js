@@ -5,19 +5,15 @@ function Order ( size, toppings ) {
   this.price = 0;
 }
 
-Order.prototype.calculateSizePrice = function(){
+Order.prototype.calculateOrderPrice = function(){
   if(this.size === "small"){
-    this.price = 5;
+    this.price = 5 + (this.toppings.length);
   } else if(this.size === "medium"){
-    this.price = 10;
+    this.price = 10 + (this.toppings.length);
   } else if(this.size === "large"){
-    this.price = 15;
+    this.price = 15 + (this.toppings.length);
     return this.price;
   }
 }
-Order.prototype.calculateToppingsPrice = function(){
-  toppings.forEach(element => {
-    return element.length * 2;
-  });
-}
+
 // UI
