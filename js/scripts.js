@@ -25,9 +25,9 @@ function handleFormSubmission(e){
   const orderToppings = document.querySelectorAll("input[name='toppings']:checked");
   
   const toppings = Array.from(orderToppings);
-  toppings.forEach((element)=>{
+  toppings.forEach(()=>{ // elem
     const paragraph = document.createElement("p");
-    paragraph.append(element.value);
+    paragraph.append(document.getElementsByName("toppings.name"));
     document.body.append(paragraph);
   })
 
