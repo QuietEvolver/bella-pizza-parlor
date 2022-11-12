@@ -37,22 +37,27 @@ Create a website for a pizza company where a user can choose one or more individ
 Describe: Order()           
 Test: "It should create a pizza order object with three keys: size, toppings, price."
 Code: const myOrder = new Order(["anchovies", "pineapple"], "medium", 0);
-Expected Output: Order { toppings: ["anchovies", "pineapple"], size: "medium", price: 0; }
+Expected Output: Order { toppings: ['anchovies', 'pineapple'], size: "medium", price: 0; }
 
 Describe: Order.prototype.calculateSizePrice();
 Test: "It should calculate an order based on size."
 Code: calculateOrderPrice("small", ["basil"])
-Expected Output:size: {'small', toppings: 'basil', price: 5};
+Expected Output:size: {'small', [toppings: 'basil'], price: 5};
 
-Describe: Order.prototype.calculateOrderPrice();
+Describe: Order.prototype.calculateSizePrice();
 Test: "It should calculate an order based on size plus toppings."
 Code: calculateOrderPrice("medium", ["basil"])
-Expected Output:size: {'medium', toppings: 'basil', price: 12};
+Expected Output:size: {'medium', [toppings: 'basil'], price: 12};
 
 Describe: Order.prototype.calculateToppingsPrice();
 Test: "It should calculate an order based on toppings."
 Code: calculateOrderPrice("medium", ["basil"])
-Expected Output:size: {'medium', toppings: 'basil', price: 12};
+Expected Output:size: {'medium', [toppings: 'basil'], price: 7};
+
+Describe: Order.prototype.calculateOrderPrice();
+Test: "It should calculate an order based on size plus toppings."
+Code: calculateOrderPrice("medium", ["anchovies", "pineapple"])
+Expected Output:size: {'medium', [toppings: 'anchovies','pineapple'], price: 12};
 
 ```
 ## Setup/Installation Requirements
