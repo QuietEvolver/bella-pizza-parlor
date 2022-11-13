@@ -23,19 +23,20 @@ function handleFormSubmission(e){
   const size = document.querySelector("input[name='order-size']:checked").value;
   // const toppings = document.querySelector('.topping').checked;
   const orderToppings = document.querySelectorAll("input[name='toppings']:checked").value;
-  
   // const toppings = Array.from(orderToppings);
   const toppings = [];
   toppings.push(orderToppings);
   let checkedOrderToppings = this.orderToppings;
-  for(let i = 0; i<(Object.keys(this.checkedOrderToppings).length); i++){ 
-    if(document.getElementById("pepperoni").checked===true){
-      toppings.push("pepperoni");
-    }
+  // for(let i = 0; i<checkedOrderToppings.length; i++){ 
+  //   if(document.getElementById("pepperoni").checked===true){
+  //     toppings.push("pepperoni");
+  //   }
+  console.log("checked order toppings: ", 
+  checkedOrderToppings)
   //   const paragraph = document.createElement("p");
   //   paragraph.append(document.querySelectorAll(".toppings"));
   //   document.body.append(paragraph);
-  };
+ // };
 
   
   let order = new Order(size, toppings);
