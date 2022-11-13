@@ -38,9 +38,10 @@ function handleFormSubmission(e){
     }
     if(document.getElementById("anchovies").checked===true){
       toppings.push("anchovies");
-    } else {
-     alert("this is looping toppings");
-   }
+    } 
+    if (document.querySelectorAll(".toppings").checked === false){
+      document.querySelectorAll(".toppings").innerHTML = "No toppings.";
+    }
 //   //   const paragraph = document.createElement("p");
 //   //   paragraph.append(document.querySelectorAll(".toppings"));
 //   //   document.body.append(paragraph);
@@ -51,15 +52,18 @@ function handleFormSubmission(e){
   order.toppings;
   console.log("Size: ", size);
   order.calculateOrderPrice();
-  console.log("THIS order.prototype.calcPrice: ", order.calculateOrderPrice(this.size, this.toppings));
+  let output = order.calculateOrderPrice(this.size, this.toppings);
+  console.log("output price calc: ", output)
+  document.getElementById("ouput", output);
   console.log("order.toppings: ", order.toppings);
   // console.log("Order Toppings: ", orderToppings);
 
   // const output = document.querySelector(".price-output").innerHTML;
   // document.querySelector(".size").innerText = order.size;
   // document.querySelector(".toppings").innerText = order.toppings;
-  // document.querySelector(".price").innerHTML = price;
-
+  // document.querySelector(".price").innerText = price;
+  document.querySelector('p').innerText = "Your order price is  $" + order.calculateOrderPrice(this.size, this.toppings);// order.size + " comes with " + order.toppings + "! In addition to that, your cost is " + order.price + " Thanks for your patronage!";
+  // document.querySelector('p').removeAttribute("class")
 }
 
 window.addEventListener("load", ()=> {
