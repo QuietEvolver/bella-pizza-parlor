@@ -28,10 +28,6 @@ function handleFormSubmission(e){
   console.log("e: ", e);
   const size = document.querySelector("input[name='order-size']:checked").value;
   console.log("size: ", size);
-  // const toppings = document.querySelector('.topping').checked;
-  // const orderToppings = document.querySelectorAll("input[name=toppings]:checked");
-  // console.log("Intake OrderToppings: ", orderToppings);
-  // const toppings = Array.from(orderToppings);
   const toppings = [];
   if(document.getElementById("pepperoni").checked===true){
     toppings.push("pepperoni");
