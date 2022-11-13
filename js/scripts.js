@@ -27,11 +27,7 @@ function handleFormSubmission(e){
   e.preventDefault();
   console.log("e: ", e);
   const size = document.querySelector("input[name='order-size']:checked").value;
-  console.log("size: ", size);
-  // const toppings = document.querySelector('.topping').checked;
-  // const orderToppings = document.querySelectorAll("input[name=toppings]:checked");
-  // console.log("Intake OrderToppings: ", orderToppings);
-  // const toppings = Array.from(orderToppings);
+
   const toppings = [];
   if(document.getElementById("pepperoni").checked===true){
     toppings.push("pepperoni");
@@ -45,12 +41,11 @@ function handleFormSubmission(e){
   
   let order = new Order(size, toppings);
   order.toppings;
-  console.log("Size: ", size);
   order.calculateOrderPrice();
+  
   let output = order.calculateOrderPrice(this.size, this.toppings);
-  console.log("output price calc: ", output)
   document.getElementById("ouput", output);
-  console.log("order.toppings: ", order.toppings);
+
   document.querySelector('p').innerText = "Your order price is  $" + order.calculateOrderPrice(this.size, this.toppings) + " for a " + order.size + " " + order.toppings + " pizza.  " + "Thanks for your patronage!";
 }
 
