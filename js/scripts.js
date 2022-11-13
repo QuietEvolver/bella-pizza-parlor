@@ -6,6 +6,9 @@ function Order ( size, toppings ) {
 }
 
 Order.prototype.calculateOrderPrice = function(){
+  if(this.toppings.price === 0){
+    return this.size;
+  }
   if(this.size === "small"){
     this.price = 5 + (this.toppings.length *2);
   } else if(this.size === "medium"){
@@ -27,11 +30,6 @@ function handleFormSubmission(e){
   console.log("Intake OrderToppings: ", orderToppings);
   // const toppings = Array.from(orderToppings);
   const toppings = [];
-  // toppings.push(NodeList);
-  // console.log("toppings: ", toppings);
-  // console.log("toppings: ",  toppings.push(NodeList));
-  // let checkedOrderToppings = this.orderToppings;
-//   for(let i = 0; i<checkedOrderToppings.length; i++){ 
     if(document.getElementById("pepperoni").checked===true){
       toppings.push("pepperoni");
     } 
@@ -41,10 +39,8 @@ function handleFormSubmission(e){
     if(document.getElementById("anchovies").checked===true){
       toppings.push("anchovies");
     } else {
-     window.alert("this is looping toppings");
+     alert("this is looping toppings");
    }
-//   console.log("checked order toppings: ", 
-//   checkedOrderToppings)
 //   //   const paragraph = document.createElement("p");
 //   //   paragraph.append(document.querySelectorAll(".toppings"));
 //   //   document.body.append(paragraph);
@@ -52,7 +48,6 @@ function handleFormSubmission(e){
 //   }
   
   let order = new Order(size, toppings);
-  // order.size;
   order.toppings;
   console.log("Size: ", size);
   order.calculateOrderPrice();
