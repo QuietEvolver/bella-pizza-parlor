@@ -56,7 +56,7 @@ function handleFormSubmission(e){
   order.toppings;
   console.log("Size: ", size);
   order.calculateOrderPrice();
-  console.log("order.prototype.calcPrice: ", order.calculateOrderPrice(this.size, this.toppings));
+  console.log("THIS order.prototype.calcPrice: ", order.calculateOrderPrice(this.size, this.toppings));
   console.log("order.toppings: ", order.toppings);
   // console.log("Order Toppings: ", orderToppings);
 
