@@ -54,6 +54,10 @@ Test: "It should calculate an order based on size plus toppings."
 Code: calculateOrderPrice("medium", ["anchovies", "pineapple"])
 Expected Output:size: {'medium', [toppings: 'anchovies','pineapple'], price: 12};
 
+Test: "It should calculate an order based on size plus toppings."
+Code: calculateOrderPrice("large", [0])
+Expected Output:size: {'large', [], price: 15};
+
 ```
 ## Setup/Installation Requirements
 
