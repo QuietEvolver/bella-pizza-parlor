@@ -41,12 +41,11 @@ function handleFormSubmission(e){
   
   let order = new Order(size, toppings);
   order.toppings;
-  console.log("Size: ", size);
   order.calculateOrderPrice();
+
   let output = order.calculateOrderPrice(this.size, this.toppings);
-  console.log("output price calc: ", output)
   document.getElementById("ouput", output);
-  console.log("order.toppings: ", order.toppings);
+  
   document.querySelector('p').innerText = "Your order price is  $" + order.calculateOrderPrice(this.size, this.toppings) + " for a " + order.size + " " + order.toppings + " pizza.  " + "Thanks for your patronage!";
 }
 
