@@ -9,10 +9,12 @@ Order.prototype.calculateOrderPrice = function(){
   if(this.toppings.price === 0){
     return this.size;
   }
-  if(this.size === "small"){
+  else if(this.size === "small"){
     this.price = 5 + (this.toppings.length *2);
+    return this.price;
   } else if(this.size === "medium"){
     this.price = 10 + (this.toppings.length *2);
+    return this.price;
   } else if(this.size === "large"){
     this.price = 15 + (this.toppings.length *2);
     return this.price;
@@ -62,7 +64,7 @@ function handleFormSubmission(e){
   // document.querySelector(".size").innerText = order.size;
   // document.querySelector(".toppings").innerText = order.toppings;
   // document.querySelector(".price").innerText = price;
-  document.querySelector('p').innerText = "Your order price is  $" + order.calculateOrderPrice(this.size, this.toppings);// order.size + " comes with " + order.toppings + "! In addition to that, your cost is " + order.price + " Thanks for your patronage!";
+  document.querySelector('p').innerText = "Your order price is  $" + order.calculateOrderPrice(this.size, this.toppings) + " for a " + order.size + " " + order.toppings + " pizza.  " + "Thanks for your patronage!";
   // document.querySelector('p').removeAttribute("class")
 }
 
