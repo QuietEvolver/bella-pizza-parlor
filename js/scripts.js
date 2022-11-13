@@ -22,7 +22,8 @@ function handleFormSubmission(e){
   console.log("e: ", e);
   const size = document.querySelector("input[name='order-size']:checked").value;
   // const toppings = document.querySelector('.topping').checked;
-  const orderToppings = document.querySelectorAll("input[name='toppings']:checked").value;
+  const orderToppings = document.querySelector(".toppings").value;
+  console.log("Intake OrderToppings: ", orderToppings);
   // const toppings = Array.from(orderToppings);
   const toppings = [];
   toppings.push(orderToppings);
@@ -44,8 +45,8 @@ function handleFormSubmission(e){
   order.toppings;
   console.log("Size: ", size);
   order.calculateOrderPrice(size, toppings);
-  console.log("Price: ", order.calculateOrderPrice(size));
-  console.log("Toppings: ", order.toppings);
+  console.log("order.prototype.calcPrice: ", order.calculateOrderPrice(size, toppings));
+  console.log("order.toppings: ", order.toppings);
   // console.log("Order Toppings: ", orderToppings);
 
   // const output = document.querySelector(".price-output").innerHTML;
