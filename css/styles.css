@@ -1,5 +1,12 @@
-.hidden{
-  display: none;
+h1 {
+  color:rgb(150, 244, 107);
+  font-style: italic;
+}
+ #output {
+  color:rgb(115, 197, 205); 
+  font-weight: bold;
+  font-size: x-large;
+  font-style: oblique;
 }
 
 html {

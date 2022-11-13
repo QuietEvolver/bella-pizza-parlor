@@ -9,7 +9,7 @@
   <title>Bella's Pizzeria</title>
 </head>
 <body>
-  <h2>Bella's Pizzeria</h2>
+  <h1>Bella's Pizzeria</h1>
 
     
   <form>
@@ -23,8 +23,8 @@
     </fieldset> -->
 
     <fieldset id="order-size">
-      <legend>$ Size(s): Select preference</legend>
-      <input type="radio" id="small" name="order-size" value="small">
+      <legend>$ Size(s): <em>Prices vary by size</em> </legend>
+      <input type="radio" id="small" name="order-size" value="small" checked>
       <label for="small" checked >Small $5</label>
       <input type="radio" id="medium" name="order-size" value="medium">
       <label for="medium">Medium $10</label>
@@ -33,7 +33,7 @@
     </fieldset>
 
     <fieldset id="order-toppings">
-      <legend>$ Topping(s): Leave unchecked for No Toppings</legend>
+      <legend>$ Topping(s): <em>$2 each</em></legend>
       <input class="toppings" type="checkbox" id="pepperoni" name="toppings" value="pepperoni">
       <label for="pepperoni">Pepperoni</label>
       <input class="toppings" type="checkbox" id="mushroom" name="toppings" value="mushroom">
@@ -45,7 +45,7 @@
       <button type="submit">Order</button>
     </div>
   </form>
-  <!-- <pre id="log"></pre> -->
+  
   <div id="output">
     <p id="size"></p>
     <p id="toppings"></p>
