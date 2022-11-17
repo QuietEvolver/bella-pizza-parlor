@@ -29,7 +29,7 @@ Order.prototype.selectedOrder = function(){
   console.log("I am in the size.", size);
   console.log("I am in the toppings.", toppings);
   console.log("I am in the price.", price);
-  return `Your order price is $ ${price} for a ${size} ${toppings} pizza. Thanks for your patronage!`;
+  return `Your order price is $ ${price} for a ${size} ${toppings} pizza. \n Thanks for your patronage!`;
 }
 
 // UI
