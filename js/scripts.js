@@ -22,8 +22,14 @@ Order.prototype.calculateOrderPrice = function(){
 }
 
 Order.prototype.selectedOrder = function(){
+  let size = this.size; 
+  let toppings = this.toppings;
+  let price = this.price;
   console.log("I am in the function.");
-  return "Your order price is  $" +  " for a " + this.size + " " + this.toppings + " pizza.  " + "Thanks for your patronage!"
+  console.log("I am in the size.", size);
+  console.log("I am in the toppings.", toppings);
+  console.log("I am in the price.", price);
+  return `Your order price is $ ${price} for a ${size} ${toppings} pizza. Thanks for your patronage!`;
 }
 
 // UI
@@ -50,11 +56,10 @@ function handleFormSubmission(e){
   order.toppings;
   order.calculateOrderPrice();
 
-  // let output = order.calculateOrderPrice(this.size, this.toppings);
-  // document.querySelector('p').innerText = "Your order price is  $" + order.calculateOrderPrice(this.size, this.toppings) + " for a " + order.size + " " + order.toppings + " pizza.  " + "Thanks for your patronage!";
   let output = order.selectedOrder();
+  console.log("ouput", output)
   document.getElementById("ouput", output);
-  document.querySelector('p').innerText = `Your order is ${output.wholeOrder}`;
+  document.querySelector('p').innerText = `Your order is ${output}`;
 }
 
 window.addEventListener("load", ()=> {
