@@ -35,9 +35,21 @@ Expected Output: Order { toppings: ['anchovies', 'pineapple'], size: "medium", p
 
 Describe: Order.prototype.selectedOrder();
 
-Test: "It should receive and capture inputted selections from the user."
+Test: "It should receive and capture inputted selections from the user based on small size with 1 topping."
 Code: selectedOrder("small", ["basil"]);
 Expected Output: size:{'small', ['basil']};
+
+Test: "It should receive and capture inputted selections from the user based on small size plus 3 toppings."
+Code: calculateOrderPrice("small", ["anchovies", "mushroom", "pineapple"])
+Expected Output:size: {'small', [toppings: 'anchovies', 'mushroom', 'pineapple']};
+
+Test: "It should receive and capture inputted selections from the user based on medium size plus 2 toppings."
+Code: calculateOrderPrice("medium", ["anchovies", "pineapple"])
+Expected Output:size: {'medium', [toppings: 'anchovies','pineapple']};
+
+Test: "It should receive and capture inputted selections from the user based on large size plus no toppings."
+Code: calculateOrderPrice("large", [0])
+Expected Output:size: {'large', []};
 
 Describe: Order.prototype.calculateSizePrice();
 
