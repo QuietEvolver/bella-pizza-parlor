@@ -31,12 +31,22 @@ Test: "It should create a pizza order object with three keys: size, toppings, pr
 Code: const myOrder = new Order(["anchovies", "pineapple"], "medium", 0);
 Expected Output: Order { toppings: ['anchovies', 'pineapple'], size: "medium", price: 0; }
 
+// FIX test logic first so that calculateOrderPrice() is never expecting to be passed in arguments. These need to be done on Order creation//
+
+Describe: Order.prototype.selectedOrder();
+
+Test: "It should receive and capture inputted selections from the user."
+Code: selectedOrder("small", ["basil"]);
+Expected Output: size:{'small', ['basil']};
+
 Describe: Order.prototype.calculateSizePrice();
+
 Test: "It should calculate an order based on size."
 Code: calculateOrderPrice("small", ["basil"])
 Expected Output:size: {'small', [toppings: 'basil'], price: 5};
 
 Describe: Order.prototype.calculateToppingsPrice();
+
 Test: "It should calculate an order based on toppings."
 Code: calculateOrderPrice("medium", ["basil"])
 Expected Output:size: {'medium', [toppings: 'basil'], price: 2};
