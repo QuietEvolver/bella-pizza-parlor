@@ -26,14 +26,6 @@ Create a website for a pizza company where a user can choose one or more individ
 
 ## Tests
 ```
-// (example of FINAL FXN BLOCK test)
-** Describe: Pizza()           
-// Describe statement is listed once, for a single function
-// For multiple pieces of functionality, write multiple tests (as many as are needed) under the same Describe bloc
-** Test: "It should return a Pizza object with two properties for toppings and size"
-** Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
-** Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
-
 Describe: Order()           
 Test: "It should create a pizza order object with three keys: size, toppings, price."
 Code: const myOrder = new Order(["anchovies", "pineapple"], "medium", 0);
@@ -50,13 +42,22 @@ Code: calculateOrderPrice("medium", ["basil"])
 Expected Output:size: {'medium', [toppings: 'basil'], price: 2};
 
 Describe: Order.prototype.calculateOrderPrice();
-Test: "It should calculate an order based on size plus toppings."
+
+Test: "It should calculate an order based on small size plus 3 toppings."
+Code: calculateOrderPrice("small", ["anchovies", "mushroom", "pineapple"])
+Expected Output:size: {'small', [toppings: 'anchovies', 'mushroom', 'pineapple'], price: 11};
+
+Test: "It should calculate an order based on medium size plus 2 toppings."
 Code: calculateOrderPrice("medium", ["anchovies", "pineapple"])
 Expected Output:size: {'medium', [toppings: 'anchovies','pineapple'], price: 12};
 
-Test: "It should calculate an order based on size plus toppings."
+Test: "It should calculate an order based on large size plus no toppings."
 Code: calculateOrderPrice("large", [0])
 Expected Output:size: {'large', [], price: 15};
+
+Test: "It should calculate an order based on small size with 1 topping."
+Code: calculateOrderPrice("small", ["basil"])
+Expected Output:size: {'small', [toppings: 'basil'], price: 7};
 
 ```
 ## Setup/Installation Requirements
