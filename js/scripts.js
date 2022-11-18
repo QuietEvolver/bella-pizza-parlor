@@ -24,7 +24,8 @@ Order.prototype.calculateOrderPrice = function(){
 Order.prototype.selectedOrder = function(){
   let size = this.size; 
   let toppings = this.toppings;
-  return `Your order is for a ${size} ${toppings} pizza. \n Thanks for your patronage!`;
+  let price = this.price;
+  return `Your order price is $ ${price} for a ${size} ${toppings} pizza. \n Thanks for your patronage!`;
 }
 
 // UI
