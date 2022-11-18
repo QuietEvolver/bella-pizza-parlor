@@ -43,6 +43,10 @@ Test: "It should receive and capture inputted selections from the user based on 
 Code: calculateOrderPrice("small", ["anchovies", "mushroom", "pineapple"])
 Expected Output:size: {'small', [toppings: 'anchovies', 'mushroom', 'pineapple']};
 
+Test: "It should receive and capture inputted selections from the user based on medium size plus 2 toppings and show price."
+Code: calculateOrderPrice("medium", ["anchovies", "pineapple"])
+Expected Output:size: {'medium', [toppings: 'anchovies','pineapple'], price: 12};
+
 Describe: Order.prototype.calculateSizePrice();
 
 Test: "It should calculate an order based on size."
